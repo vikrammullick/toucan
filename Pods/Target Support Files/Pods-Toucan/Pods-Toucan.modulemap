@@ -1,6 +1,0 @@
-framework module Pods_Toucan {
-  umbrella header "Pods-Toucan-umbrella.h"
-
-  export *
-  module * { export * }
-}
