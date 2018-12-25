@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B236829E7727DAAAC3D43A6 /* Pods_ToucanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816059F91A0287DCD95BD966 /* Pods_ToucanTests.framework */; };
+		BAB78F961F7750088744650C /* Pods_Toucan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DDF4FE7DCE093240EFC4A1 /* Pods_Toucan.framework */; };
+		C18392D7E465E2ECE3FD5AAA /* Pods_ToucanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69027A2F4A25651DBAD6E73A /* Pods_ToucanUITests.framework */; };
 		E455693021D011BF00ED676D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455692F21D011BF00ED676D /* AppDelegate.swift */; };
 		E455693221D011BF00ED676D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455693121D011BF00ED676D /* ViewController.swift */; };
 		E455693521D011BF00ED676D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E455693321D011BF00ED676D /* Main.storyboard */; };
@@ -14,6 +17,9 @@
 		E455693A21D011C100ED676D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E455693821D011C100ED676D /* LaunchScreen.storyboard */; };
 		E455694521D011C100ED676D /* ToucanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455694421D011C100ED676D /* ToucanTests.swift */; };
 		E455695021D011C100ED676D /* ToucanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455694F21D011C100ED676D /* ToucanUITests.swift */; };
+		E4C21AC021D17BE400213100 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4C21ABF21D17BE400213100 /* GoogleService-Info.plist */; };
+		E4C21AC721D1BE2000213100 /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C21AC621D1BE2000213100 /* MusicAPI.swift */; };
+		E4C21ACB21D28BFE00213100 /* url.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C21ACA21D28BFE00213100 /* url.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C14BED852F807EC191743AB /* Pods-Toucan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toucan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toucan/Pods-Toucan.debug.xcconfig"; sourceTree = "<group>"; };
+		2C1F3AD4CE6FB6FFE8EE7DCC /* Pods-ToucanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToucanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToucanTests/Pods-ToucanTests.release.xcconfig"; sourceTree = "<group>"; };
+		404ACC8A54A66FA7A81D60C3 /* Pods-ToucanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToucanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToucanTests/Pods-ToucanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		69027A2F4A25651DBAD6E73A /* Pods_ToucanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToucanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		816059F91A0287DCD95BD966 /* Pods_ToucanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToucanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95896E3823668A9DC5DAFB3 /* Pods-ToucanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToucanUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToucanUITests/Pods-ToucanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3F753DD8B8099DE064BF2E9 /* Pods-ToucanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToucanUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToucanUITests/Pods-ToucanUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E455692C21D011BF00ED676D /* Toucan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toucan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E455692F21D011BF00ED676D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E455693121D011BF00ED676D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +60,12 @@
 		E455694B21D011C100ED676D /* ToucanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToucanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E455694F21D011C100ED676D /* ToucanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToucanUITests.swift; sourceTree = "<group>"; };
 		E455695121D011C100ED676D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4C21ABF21D17BE400213100 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E4C21AC621D1BE2000213100 /* MusicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicAPI.swift; sourceTree = "<group>"; };
+		E4C21ACA21D28BFE00213100 /* url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = url.swift; sourceTree = "<group>"; };
+		E4C21ACC21D2A89300213100 /* Toucan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Toucan.entitlements; sourceTree = "<group>"; };
+		EA324652370667987807F98A /* Pods-Toucan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toucan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Toucan/Pods-Toucan.release.xcconfig"; sourceTree = "<group>"; };
+		F4DDF4FE7DCE093240EFC4A1 /* Pods_Toucan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toucan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB78F961F7750088744650C /* Pods_Toucan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B236829E7727DAAAC3D43A6 /* Pods_ToucanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +89,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18392D7E465E2ECE3FD5AAA /* Pods_ToucanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		149AE6A0E38523385BF0A7DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C14BED852F807EC191743AB /* Pods-Toucan.debug.xcconfig */,
+				EA324652370667987807F98A /* Pods-Toucan.release.xcconfig */,
+				404ACC8A54A66FA7A81D60C3 /* Pods-ToucanTests.debug.xcconfig */,
+				2C1F3AD4CE6FB6FFE8EE7DCC /* Pods-ToucanTests.release.xcconfig */,
+				B95896E3823668A9DC5DAFB3 /* Pods-ToucanUITests.debug.xcconfig */,
+				E3F753DD8B8099DE064BF2E9 /* Pods-ToucanUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		17A8CE4D7BC9BE444F0B1023 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4DDF4FE7DCE093240EFC4A1 /* Pods_Toucan.framework */,
+				816059F91A0287DCD95BD966 /* Pods_ToucanTests.framework */,
+				69027A2F4A25651DBAD6E73A /* Pods_ToucanUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E455692321D011BF00ED676D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +126,8 @@
 				E455694321D011C100ED676D /* ToucanTests */,
 				E455694E21D011C100ED676D /* ToucanUITests */,
 				E455692D21D011BF00ED676D /* Products */,
+				149AE6A0E38523385BF0A7DC /* Pods */,
+				17A8CE4D7BC9BE444F0B1023 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +144,16 @@
 		E455692E21D011BF00ED676D /* Toucan */ = {
 			isa = PBXGroup;
 			children = (
+				E4C21ACC21D2A89300213100 /* Toucan.entitlements */,
+				E4C21AC921D28BF100213100 /* utils */,
+				E4C21AC321D1B9CE00213100 /* api */,
 				E455692F21D011BF00ED676D /* AppDelegate.swift */,
 				E455693121D011BF00ED676D /* ViewController.swift */,
 				E455693321D011BF00ED676D /* Main.storyboard */,
 				E455693621D011C100ED676D /* Assets.xcassets */,
 				E455693821D011C100ED676D /* LaunchScreen.storyboard */,
 				E455693B21D011C100ED676D /* Info.plist */,
+				E4C21ABF21D17BE400213100 /* GoogleService-Info.plist */,
 			);
 			path = Toucan;
 			sourceTree = "<group>";
@@ -125,6 +176,22 @@
 			path = ToucanUITests;
 			sourceTree = "<group>";
 		};
+		E4C21AC321D1B9CE00213100 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				E4C21AC621D1BE2000213100 /* MusicAPI.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		E4C21AC921D28BF100213100 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E4C21ACA21D28BFE00213100 /* url.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E455695421D011C100ED676D /* Build configuration list for PBXNativeTarget "Toucan" */;
 			buildPhases = (
+				0C8606C9BB0DD93D70E9B7CB /* [CP] Check Pods Manifest.lock */,
 				E455692821D011BF00ED676D /* Sources */,
 				E455692921D011BF00ED676D /* Frameworks */,
 				E455692A21D011BF00ED676D /* Resources */,
+				22498B783A571F3F70585C92 /* [CP] Embed Pods Frameworks */,
+				56ECBC5E4D1732AACC06AABE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E455695721D011C100ED676D /* Build configuration list for PBXNativeTarget "ToucanTests" */;
 			buildPhases = (
+				15899A7FC39C7CB6B23F44E4 /* [CP] Check Pods Manifest.lock */,
 				E455693C21D011C100ED676D /* Sources */,
 				E455693D21D011C100ED676D /* Frameworks */,
 				E455693E21D011C100ED676D /* Resources */,
@@ -167,6 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E455695A21D011C100ED676D /* Build configuration list for PBXNativeTarget "ToucanUITests" */;
 			buildPhases = (
+				B724CBE63DA9565CD1FA82AD /* [CP] Check Pods Manifest.lock */,
 				E455694721D011C100ED676D /* Sources */,
 				E455694821D011C100ED676D /* Frameworks */,
 				E455694921D011C100ED676D /* Resources */,
@@ -193,6 +265,14 @@
 				TargetAttributes = {
 					E455692B21D011BF00ED676D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					E455693F21D011C100ED676D = {
 						CreatedOnToolsVersion = 10.1;
@@ -230,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E455693A21D011C100ED676D /* LaunchScreen.storyboard in Resources */,
+				E4C21AC021D17BE400213100 /* GoogleService-Info.plist in Resources */,
 				E455693721D011C100ED676D /* Assets.xcassets in Resources */,
 				E455693521D011BF00ED676D /* Main.storyboard in Resources */,
 			);
@@ -251,13 +332,176 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C8606C9BB0DD93D70E9B7CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Toucan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15899A7FC39C7CB6B23F44E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToucanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22498B783A571F3F70585C92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Toucan/Pods-Toucan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Toucan/Pods-Toucan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56ECBC5E4D1732AACC06AABE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Toucan/Pods-Toucan-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Toucan/Pods-Toucan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B724CBE63DA9565CD1FA82AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToucanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E455692821D011BF00ED676D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C21AC721D1BE2000213100 /* MusicAPI.swift in Sources */,
 				E455693221D011BF00ED676D /* ViewController.swift in Sources */,
 				E455693021D011BF00ED676D /* AppDelegate.swift in Sources */,
+				E4C21ACB21D28BFE00213100 /* url.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,11 +674,14 @@
 		};
 		E455695521D011C100ED676D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C14BED852F807EC191743AB /* Pods-Toucan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Toucan/Toucan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4QUTB7N9SJ;
+				DEVELOPMENT_TEAM = 7JEQ65LN2K;
 				INFOPLIST_FILE = Toucan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,11 +695,14 @@
 		};
 		E455695621D011C100ED676D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA324652370667987807F98A /* Pods-Toucan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Toucan/Toucan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4QUTB7N9SJ;
+				DEVELOPMENT_TEAM = 7JEQ65LN2K;
 				INFOPLIST_FILE = Toucan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +716,7 @@
 		};
 		E455695821D011C100ED676D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 404ACC8A54A66FA7A81D60C3 /* Pods-ToucanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +738,7 @@
 		};
 		E455695921D011C100ED676D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C1F3AD4CE6FB6FFE8EE7DCC /* Pods-ToucanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +760,7 @@
 		};
 		E455695B21D011C100ED676D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B95896E3823668A9DC5DAFB3 /* Pods-ToucanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +781,7 @@
 		};
 		E455695C21D011C100ED676D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F753DD8B8099DE064BF2E9 /* Pods-ToucanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
