@@ -20,6 +20,7 @@
 		E4C21AC021D17BE400213100 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4C21ABF21D17BE400213100 /* GoogleService-Info.plist */; };
 		E4C21AC721D1BE2000213100 /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C21AC621D1BE2000213100 /* MusicAPI.swift */; };
 		E4C21ACB21D28BFE00213100 /* url.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C21ACA21D28BFE00213100 /* url.swift */; };
+		E4C21ADA21D3731400213100 /* ToucanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C21AD921D3731400213100 /* ToucanAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		E4C21AC621D1BE2000213100 /* MusicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicAPI.swift; sourceTree = "<group>"; };
 		E4C21ACA21D28BFE00213100 /* url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = url.swift; sourceTree = "<group>"; };
 		E4C21ACC21D2A89300213100 /* Toucan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Toucan.entitlements; sourceTree = "<group>"; };
+		E4C21AD921D3731400213100 /* ToucanAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToucanAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				E4C21AC621D1BE2000213100 /* MusicAPI.swift */,
+				E4C21AD921D3731400213100 /* ToucanAPI.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C21ADA21D3731400213100 /* ToucanAPI.swift in Sources */,
 				E4C21AC721D1BE2000213100 /* MusicAPI.swift in Sources */,
 				E455693221D011BF00ED676D /* ViewController.swift in Sources */,
 				E455693021D011BF00ED676D /* AppDelegate.swift in Sources */,
