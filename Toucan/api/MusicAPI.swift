@@ -22,7 +22,8 @@ struct MusicAPI {
     // GET /appleDevToken
     static func setAppleDeveloperToken(completion: @escaping (() -> Void))
     {
-        Alamofire.request("https://us-central1-toucan-40cc1.cloudfunctions.net/toucan/appleDevToken", method: .get, encoding: URLEncoding.default).responseJSON {responseData in
+        let Auth_header = [ "Authorization" : "Bearer \(ToucanAPI.firebaseToken)" ]
+        Alamofire.request("https://us-central1-toucan-40cc1.cloudfunctions.net/toucan/appleDevToken", method: .get, encoding: URLEncoding.queryString, headers: Auth_header).responseJSON {responseData in
             let response = JSON(responseData.result.value!)
             if let appleDevToken = response["token"].string
             {

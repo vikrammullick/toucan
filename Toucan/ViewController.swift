@@ -12,28 +12,66 @@ import StoreKit
 import Alamofire
 import SwiftyJSON
 import Firebase
+import FirebaseUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
     let systemMusicPlayer = MPMusicPlayerController.systemMusicPlayer
 
+    @IBAction func tap(_ sender: Any) {
+        let authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        let providers: [FUIAuthProvider] = [FUIGoogleAuth()]
+        authUI?.providers = providers
+        if let authViewController = authUI?.authViewController()
+        {
+            present(authViewController, animated:true, completion:nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib
-        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            user?.getIDToken(completion: { (token:String?, err:Error?) in
+                guard err != nil else
+                {
+                    ToucanAPI.firebaseToken = token!
+                    self.initializeKeys()
+                    return
+                }
+            })
+            user?.getIDTokenForcingRefresh(true, completion: { (token:String?, err:Error?) in
+                guard err != nil else
+                {
+                    ToucanAPI.firebaseToken = token!
+                    return
+                }
+            })
+        }
+    }
+    
+    func initializeKeys()
+    {
         MusicAPI.setAppleDeveloperToken(completion: {
             self.appleMusicCheckIfDeviceCanPlayback(completion: {
                 MusicAPI.setMusicUserToken(completion: {
                     MusicAPI.setStorefrontId(completion: {
-                        self.getUserData(limit: "100", offset: "0")
+                       self.executeTestFunctions()
                     })
                 })
             })
         })
     }
     
-    func playSong(){
-        MusicAPI.getSong(search: "christmas", completion: { (response : JSON) in
+    func executeTestFunctions()
+    {
+        self.getUserData(limit: "100", offset: "0")
+        //self.playSong(search: "mariah carey christmas")
+    }
+    
+    func playSong(search: String){
+        MusicAPI.getSong(search: search, completion: { (response : JSON) in
             if let trackId = response["results"]["songs"]["data"][0]["attributes"]["playParams"]["id"].string
             {
                 self.systemMusicPlayer.setQueue(with: [trackId])
@@ -95,3 +133,18 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: FUIAuthDelegate
+{
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        let sourceApplication = options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String?
+        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+            return true
+        }
+        // other URL handling goes here.
+        return false
+    }
+    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+        // handle user and error as necessary
+    }
+}
