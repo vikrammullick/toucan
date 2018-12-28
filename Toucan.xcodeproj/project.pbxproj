@@ -18,6 +18,9 @@
 		E455694521D011C100ED676D /* ToucanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455694421D011C100ED676D /* ToucanTests.swift */; };
 		E455695021D011C100ED676D /* ToucanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455694F21D011C100ED676D /* ToucanUITests.swift */; };
 		E4A16DBE21D5A71600BD23D2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DBD21D5A71600BD23D2 /* RootViewController.swift */; };
+		E4A16DC221D6273200BD23D2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DC121D6273200BD23D2 /* FeedViewController.swift */; };
+		E4A16DC421D6273C00BD23D2 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DC321D6273C00BD23D2 /* MusicViewController.swift */; };
+		E4A16DC621D6274900BD23D2 /* RouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DC521D6274900BD23D2 /* RouletteViewController.swift */; };
 		E4C21AC021D17BE400213100 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4C21ABF21D17BE400213100 /* GoogleService-Info.plist */; };
 		E4C21AC721D1BE2000213100 /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C21AC621D1BE2000213100 /* MusicAPI.swift */; };
 		E4C21ACB21D28BFE00213100 /* url.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C21ACA21D28BFE00213100 /* url.swift */; };
@@ -65,6 +68,9 @@
 		E455694F21D011C100ED676D /* ToucanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToucanUITests.swift; sourceTree = "<group>"; };
 		E455695121D011C100ED676D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4A16DBD21D5A71600BD23D2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		E4A16DC121D6273200BD23D2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		E4A16DC321D6273C00BD23D2 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		E4A16DC521D6274900BD23D2 /* RouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewController.swift; sourceTree = "<group>"; };
 		E4C21ABF21D17BE400213100 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E4C21AC621D1BE2000213100 /* MusicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicAPI.swift; sourceTree = "<group>"; };
 		E4C21ACA21D28BFE00213100 /* url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = url.swift; sourceTree = "<group>"; };
@@ -185,6 +191,9 @@
 			children = (
 				E455693121D011BF00ED676D /* LoginViewController.swift */,
 				E4A16DBD21D5A71600BD23D2 /* RootViewController.swift */,
+				E4A16DC121D6273200BD23D2 /* FeedViewController.swift */,
+				E4A16DC521D6274900BD23D2 /* RouletteViewController.swift */,
+				E4A16DC321D6273C00BD23D2 /* MusicViewController.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -482,8 +491,11 @@
 				E4C21AC721D1BE2000213100 /* MusicAPI.swift in Sources */,
 				E4A16DBE21D5A71600BD23D2 /* RootViewController.swift in Sources */,
 				E455693221D011BF00ED676D /* LoginViewController.swift in Sources */,
+				E4A16DC421D6273C00BD23D2 /* MusicViewController.swift in Sources */,
+				E4A16DC621D6274900BD23D2 /* RouletteViewController.swift in Sources */,
 				E455693021D011BF00ED676D /* AppDelegate.swift in Sources */,
 				E4C21ACB21D28BFE00213100 /* url.swift in Sources */,
+				E4A16DC221D6273200BD23D2 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

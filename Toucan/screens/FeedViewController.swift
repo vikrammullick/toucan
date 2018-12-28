@@ -1,8 +1,8 @@
 //
-//  RootViewController.swift
+//  FeedViewController.swift
 //  Toucan
 //
-//  Created by Vikram Mullick on 12/27/18.
+//  Created by Vikram Mullick on 12/28/18.
 //  Copyright © 2018 Vikram Mullick. All rights reserved.
 //
 
@@ -14,10 +14,10 @@ import SwiftyJSON
 import Firebase
 import FirebaseUI
 
-class RootViewController: UITabBarController{
+class FeedViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib        
+        // Do any additional setup after loading the view, typically from a nib
     }
 }
