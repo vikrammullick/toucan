@@ -19,6 +19,8 @@ class LoginViewController: UIViewController{
     let systemMusicPlayer = MPMusicPlayerController.systemMusicPlayer
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var loginStatusLabel: UILabel!
+    @IBOutlet weak var loginActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var logoView: UIView!
     
     @IBAction func signIn(_ sender: Any) {
         if let authUI = FUIAuth.defaultAuthUI()
@@ -34,6 +36,7 @@ class LoginViewController: UIViewController{
         if let user = Auth.auth().currentUser
         {
             self.signInButton.isHidden = true
+            self.loginActivityIndicator.isHidden = false
             user.getIDTokenForcingRefresh(true, completion: { (token:String?, err:Error?) in
                 guard err != nil else
                 {
@@ -41,41 +44,47 @@ class LoginViewController: UIViewController{
                     self.initializeKeys()
                     return
                 }
+                self.signInButton.isHidden = false
+                self.loginActivityIndicator.isHidden = true
             })
         }
         else
         {
             self.signInButton.isHidden = false
+            self.loginActivityIndicator.isHidden = true
         }
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loginActivityIndicator.isHidden = false
         self.signInButton.isHidden = true
+        self.signInButton.layer.cornerRadius = 10
+        self.signInButton.layer.borderWidth = 2
+        self.signInButton.layer.backgroundColor = UIColor(red: CGFloat(70/255.0), green: CGFloat(102/255.0), blue: CGFloat(255/255.0), alpha: CGFloat(0.5)).cgColor
+        self.signInButton.layer.borderColor = UIColor(red: CGFloat(70/255.0), green: CGFloat(102/255.0), blue: CGFloat(255/255.0), alpha: CGFloat(1.0)).cgColor
+        self.loginStatusLabel.text = ""
+        self.logoView.layer.cornerRadius = 100
+        self.logoView.layer.borderWidth = 5
+        self.logoView.layer.borderColor = UIColor.white.cgColor
         // Do any additional setup after loading the view, typically from a nib
     }
     
     func initializeKeys()
     {
-        self.setLoginStatus(status: "Accessing Apple Music")
+        self.loginStatusLabel.text = "Accessing Apple Music"
         MusicAPI.setAppleDeveloperToken(completion: {
-            self.setLoginStatus(status: "Verifying Permissions")
+            self.loginStatusLabel.text = "Verifying Permissions"
             self.appleMusicCheckIfDeviceCanPlayback(completion: {
-                self.setLoginStatus(status: "Verifying Apple Music Account")
+                self.loginStatusLabel.text = "Verifying Apple Music Account"
                 MusicAPI.setMusicUserToken(completion: {
-                    self.setLoginStatus(status: "Logging in!")
+                    self.loginStatusLabel.text = "Logging in!"
                     MusicAPI.setStorefrontId(completion: {
-                        print("DONE")
                         self.performSegue(withIdentifier: "RootScreenSegue", sender: self)
                     })
                 })
             })
         })
-    }
-    
-    func setLoginStatus(status: String)
-    {
-        self.loginStatusLabel.text = status
     }
     
     func executeTestFunctions()
