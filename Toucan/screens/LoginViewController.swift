@@ -18,7 +18,8 @@ class LoginViewController: UIViewController{
 
     let systemMusicPlayer = MPMusicPlayerController.systemMusicPlayer
     @IBOutlet weak var signInButton: UIButton!
-
+    @IBOutlet weak var loginStatusLabel: UILabel!
+    
     @IBAction func signIn(_ sender: Any) {
         if let authUI = FUIAuth.defaultAuthUI()
         {
@@ -53,11 +54,16 @@ class LoginViewController: UIViewController{
         self.signInButton.isHidden = true
         // Do any additional setup after loading the view, typically from a nib
     }
+    
     func initializeKeys()
     {
+        self.setLoginStatus(status: "Accessing Apple Music")
         MusicAPI.setAppleDeveloperToken(completion: {
+            self.setLoginStatus(status: "Verifying Permissions")
             self.appleMusicCheckIfDeviceCanPlayback(completion: {
+                self.setLoginStatus(status: "Verifying Apple Music Account")
                 MusicAPI.setMusicUserToken(completion: {
+                    self.setLoginStatus(status: "Logging in!")
                     MusicAPI.setStorefrontId(completion: {
                         print("DONE")
                         self.performSegue(withIdentifier: "RootScreenSegue", sender: self)
@@ -65,6 +71,11 @@ class LoginViewController: UIViewController{
                 })
             })
         })
+    }
+    
+    func setLoginStatus(status: String)
+    {
+        self.loginStatusLabel.text = status
     }
     
     func executeTestFunctions()

@@ -37,15 +37,24 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igr-QC-KvX">
+                                <rect key="frame" x="136" y="572" width="103" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Grd-Nh-0Jf" firstAttribute="centerY" secondItem="N2y-O4-xOi" secondAttribute="centerY" id="3JM-lB-haw"/>
                             <constraint firstItem="Grd-Nh-0Jf" firstAttribute="centerX" secondItem="N2y-O4-xOi" secondAttribute="centerX" id="XrX-Lp-T5m"/>
+                            <constraint firstItem="N2y-O4-xOi" firstAttribute="bottom" secondItem="igr-QC-KvX" secondAttribute="bottom" constant="74.5" id="fqq-kI-lpn"/>
+                            <constraint firstItem="igr-QC-KvX" firstAttribute="centerX" secondItem="N2y-O4-xOi" secondAttribute="centerX" id="nqL-WH-79Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N2y-O4-xOi"/>
                     </view>
                     <connections>
+                        <outlet property="loginStatusLabel" destination="igr-QC-KvX" id="Zpl-l9-wlF"/>
                         <outlet property="signInButton" destination="Oew-6L-CbF" id="9Fp-rl-GBy"/>
                         <segue destination="55w-Z0-BI6" kind="show" identifier="RootScreenSegue" id="xLF-Kw-g1x"/>
                     </connections>
