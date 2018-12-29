@@ -9,7 +9,8 @@ target 'Toucan' do
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Firebase/Core'
-  pod 'FirebaseUI', '~> 5.0'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Google'
 
   target 'ToucanTests' do
     inherit! :search_paths

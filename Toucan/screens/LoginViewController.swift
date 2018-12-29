@@ -14,26 +14,27 @@ import SwiftyJSON
 import Firebase
 import FirebaseUI
 
-class ViewController: UIViewController{
+class LoginViewController: UIViewController{
 
     let systemMusicPlayer = MPMusicPlayerController.systemMusicPlayer
-
-    @IBAction func tap(_ sender: Any) {
-        let authUI = FUIAuth.defaultAuthUI()
-        authUI?.delegate = self
-        let providers: [FUIAuthProvider] = [FUIGoogleAuth()]
-        authUI?.providers = providers
-        if let authViewController = authUI?.authViewController()
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var loginStatusLabel: UILabel!
+    
+    @IBAction func signIn(_ sender: Any) {
+        if let authUI = FUIAuth.defaultAuthUI()
         {
+            authUI.delegate = self
+            let providers: [FUIAuthProvider] = [FUIGoogleAuth()]
+            authUI.providers = providers
+            let authViewController = authUI.authViewController()
             present(authViewController, animated:true, completion:nil)
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            user?.getIDToken(completion: { (token:String?, err:Error?) in
+    override func viewDidAppear(_ animated: Bool) {
+        if let user = Auth.auth().currentUser
+        {
+            self.signInButton.isHidden = true
+            user.getIDTokenForcingRefresh(true, completion: { (token:String?, err:Error?) in
                 guard err != nil else
                 {
                     ToucanAPI.firebaseToken = token!
@@ -41,33 +42,46 @@ class ViewController: UIViewController{
                     return
                 }
             })
-            user?.getIDTokenForcingRefresh(true, completion: { (token:String?, err:Error?) in
-                guard err != nil else
-                {
-                    ToucanAPI.firebaseToken = token!
-                    return
-                }
-            })
         }
+        else
+        {
+            self.signInButton.isHidden = false
+        }
+        
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.signInButton.isHidden = true
+        // Do any additional setup after loading the view, typically from a nib
     }
     
     func initializeKeys()
     {
+        self.setLoginStatus(status: "Accessing Apple Music")
         MusicAPI.setAppleDeveloperToken(completion: {
+            self.setLoginStatus(status: "Verifying Permissions")
             self.appleMusicCheckIfDeviceCanPlayback(completion: {
+                self.setLoginStatus(status: "Verifying Apple Music Account")
                 MusicAPI.setMusicUserToken(completion: {
+                    self.setLoginStatus(status: "Logging in!")
                     MusicAPI.setStorefrontId(completion: {
-                       self.executeTestFunctions()
+                        print("DONE")
+                        self.performSegue(withIdentifier: "RootScreenSegue", sender: self)
                     })
                 })
             })
         })
     }
     
+    func setLoginStatus(status: String)
+    {
+        self.loginStatusLabel.text = status
+    }
+    
     func executeTestFunctions()
     {
         self.getUserData(limit: "100", offset: "0")
-        //self.playSong(search: "mariah carey christmas")
+        self.playSong(search: "mariah carey christmas")
     }
     
     func playSong(search: String){
@@ -133,7 +147,7 @@ class ViewController: UIViewController{
     }
 }
 
-extension ViewController: FUIAuthDelegate
+extension LoginViewController: FUIAuthDelegate
 {
     func application(_ app: UIApplication, open url: URL,
                      options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
