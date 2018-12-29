@@ -17,18 +17,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="songbird_launch" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-IO-6ic">
-                                <rect key="frame" x="87.5" y="243.5" width="200" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5aL-w0-3B9">
+                                <rect key="frame" x="0.0" y="177" width="375" height="333"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tq-us-uew">
+                                        <rect key="frame" x="50.5" y="0.0" width="274.5" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL0-c5-0FQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="83"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="70"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bird" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yQ-kz-BEb">
+                                                <rect key="frame" x="160" y="0.0" width="114.5" height="83"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="70"/>
+                                                <color key="textColor" red="0.92941176469999998" green="0.1450980392" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="songbird_launch" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-IO-6ic">
+                                        <rect key="frame" x="87.5" y="133" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wSj-IO-6ic" secondAttribute="height" multiplier="1:1" id="AAJ-Kc-Enb"/>
+                                            <constraint firstAttribute="height" constant="200" id="Mkj-Hz-rI9"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="wSj-IO-6ic" secondAttribute="height" multiplier="1:1" id="AAJ-Kc-Enb"/>
-                                    <constraint firstAttribute="height" constant="200" id="Mkj-Hz-rI9"/>
+                                    <constraint firstItem="wSj-IO-6ic" firstAttribute="top" secondItem="6tq-us-uew" secondAttribute="bottom" constant="50" id="5PT-fG-wmN"/>
+                                    <constraint firstItem="6tq-us-uew" firstAttribute="top" secondItem="5aL-w0-3B9" secondAttribute="top" id="EBf-4J-i5J"/>
+                                    <constraint firstItem="6tq-us-uew" firstAttribute="centerX" secondItem="5aL-w0-3B9" secondAttribute="centerX" id="PwY-m6-Whb"/>
+                                    <constraint firstAttribute="bottom" secondItem="wSj-IO-6ic" secondAttribute="bottom" id="WVp-fR-9OL"/>
+                                    <constraint firstItem="wSj-IO-6ic" firstAttribute="centerX" secondItem="5aL-w0-3B9" secondAttribute="centerX" id="xEi-BQ-rCt"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wSj-IO-6ic" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2NK-Xv-A3H"/>
-                            <constraint firstItem="wSj-IO-6ic" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="LrH-rs-gYE"/>
+                            <constraint firstItem="5aL-w0-3B9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9Mh-kJ-od2"/>
+                            <constraint firstItem="5aL-w0-3B9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B21-C1-QXp"/>
+                            <constraint firstItem="5aL-w0-3B9" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Ioi-Hc-PxH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5aL-w0-3B9" secondAttribute="trailing" id="e4A-PP-xa6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -21,6 +21,7 @@ class LoginViewController: UIViewController{
     @IBOutlet weak var loginStatusLabel: UILabel!
     @IBOutlet weak var loginActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var logoView: UIView!
+    @IBOutlet weak var NameAndLogoView: UIView!
     
     @IBAction func signIn(_ sender: Any) {
         if let authUI = FUIAuth.defaultAuthUI()
@@ -67,9 +68,21 @@ class LoginViewController: UIViewController{
         self.logoView.layer.cornerRadius = 100
         self.logoView.layer.borderWidth = 5
         self.logoView.layer.borderColor = UIColor.white.cgColor
+        
+        self.animateNameAndLogoViewIntoPosition()
         // Do any additional setup after loading the view, typically from a nib
     }
-    
+    func animateNameAndLogoViewIntoPosition()
+    {
+        let xPosition = NameAndLogoView.frame.origin.x
+        let yPosition = NameAndLogoView.frame.origin.y
+        let height = NameAndLogoView.frame.size.height
+        let width = NameAndLogoView.frame.size.width
+        self.NameAndLogoView.frame = CGRect(x: xPosition, y: (self.view.frame.height-height)/2, width: width, height: height)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.NameAndLogoView.frame = CGRect(x: xPosition, y: yPosition, width: width, height: height)
+        })
+    }
     func initializeKeys()
     {
         self.loginStatusLabel.text = "Accessing Apple Music"
