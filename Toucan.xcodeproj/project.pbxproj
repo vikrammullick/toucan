@@ -17,6 +17,8 @@
 		E455693A21D011C100ED676D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E455693821D011C100ED676D /* LaunchScreen.storyboard */; };
 		E455694521D011C100ED676D /* ToucanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455694421D011C100ED676D /* ToucanTests.swift */; };
 		E455695021D011C100ED676D /* ToucanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E455694F21D011C100ED676D /* ToucanUITests.swift */; };
+		E45D560E21D87F2B0058A08B /* SwapColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D560D21D87F2B0058A08B /* SwapColorButton.swift */; };
+		E45D561021D887520058A08B /* ButtonEnabledScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D560F21D887520058A08B /* ButtonEnabledScrollView.swift */; };
 		E4A16DBE21D5A71600BD23D2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DBD21D5A71600BD23D2 /* RootViewController.swift */; };
 		E4A16DC221D6273200BD23D2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DC121D6273200BD23D2 /* FeedViewController.swift */; };
 		E4A16DC421D6273C00BD23D2 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DC321D6273C00BD23D2 /* MusicViewController.swift */; };
@@ -67,6 +69,8 @@
 		E455694B21D011C100ED676D /* ToucanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToucanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E455694F21D011C100ED676D /* ToucanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToucanUITests.swift; sourceTree = "<group>"; };
 		E455695121D011C100ED676D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E45D560D21D87F2B0058A08B /* SwapColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapColorButton.swift; sourceTree = "<group>"; };
+		E45D560F21D887520058A08B /* ButtonEnabledScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEnabledScrollView.swift; sourceTree = "<group>"; };
 		E4A16DBD21D5A71600BD23D2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E4A16DC121D6273200BD23D2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		E4A16DC321D6273C00BD23D2 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 		E455692E21D011BF00ED676D /* Toucan */ = {
 			isa = PBXGroup;
 			children = (
+				E45D560C21D87EF90058A08B /* CustomComponents */,
 				E4C21ACC21D2A89300213100 /* Toucan.entitlements */,
 				E4A16DBC21D5A61800BD23D2 /* screens */,
 				E4C21AC921D28BF100213100 /* utils */,
@@ -184,6 +189,15 @@
 				E455695121D011C100ED676D /* Info.plist */,
 			);
 			path = ToucanUITests;
+			sourceTree = "<group>";
+		};
+		E45D560C21D87EF90058A08B /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E45D560D21D87F2B0058A08B /* SwapColorButton.swift */,
+				E45D560F21D887520058A08B /* ButtonEnabledScrollView.swift */,
+			);
+			path = CustomComponents;
 			sourceTree = "<group>";
 		};
 		E4A16DBC21D5A61800BD23D2 /* screens */ = {
@@ -487,11 +501,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E45D560E21D87F2B0058A08B /* SwapColorButton.swift in Sources */,
 				E4C21ADA21D3731400213100 /* ToucanAPI.swift in Sources */,
 				E4C21AC721D1BE2000213100 /* MusicAPI.swift in Sources */,
 				E4A16DBE21D5A71600BD23D2 /* RootViewController.swift in Sources */,
 				E455693221D011BF00ED676D /* LoginViewController.swift in Sources */,
 				E4A16DC421D6273C00BD23D2 /* MusicViewController.swift in Sources */,
+				E45D561021D887520058A08B /* ButtonEnabledScrollView.swift in Sources */,
 				E4A16DC621D6274900BD23D2 /* RouletteViewController.swift in Sources */,
 				E455693021D011BF00ED676D /* AppDelegate.swift in Sources */,
 				E4C21ACB21D28BFE00213100 /* url.swift in Sources */,

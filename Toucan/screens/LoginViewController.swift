@@ -54,8 +54,8 @@ class LoginViewController: UIViewController{
             self.signInButton.isHidden = false
             self.loginActivityIndicator.isHidden = true
         }
-        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginActivityIndicator.isHidden = false

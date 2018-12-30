@@ -126,27 +126,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRo-ho-y5J">
-                                <rect key="frame" x="123" y="303.5" width="129" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="textColor" red="0.27450980390000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPR-Jr-7Ko">
-                                <rect key="frame" x="16" y="20" width="136" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="sign out"/>
-                                <connections>
-                                    <action selector="signOut:" destination="UEU-IY-xGY" eventType="touchUpInside" id="4Si-zl-hUo"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" ambiguous="YES" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFP-DN-PMe" customClass="ButtonEnabledScrollView" customModule="Toucan" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Music" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsH-yO-nEF">
+                                        <rect key="frame" x="20" y="8" width="190" height="47.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-bs-X7p">
+                                        <rect key="frame" x="30" y="75.5" width="315" height="315"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iWR-Yp-omO">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="147.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkg-05-ntl" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="147.5"/>
+                                                        <color key="backgroundColor" red="0.25098039220000001" green="0.97647058819999999" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
+                                                        <state key="normal" image="music"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RB-4K-15C" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
+                                                        <rect key="frame" x="167.5" y="0.0" width="147.5" height="147.5"/>
+                                                        <color key="backgroundColor" red="0.27450980390000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
+                                                        <state key="normal" image="playlist"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="image.tintColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tFq-Lj-rJ8">
+                                                <rect key="frame" x="0.0" y="167.5" width="315" height="147.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-UO-aAT" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="147.5"/>
+                                                        <color key="backgroundColor" red="0.99215686274509807" green="0.36862745098039218" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
+                                                        <state key="normal" image="album"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEe-N5-5NM" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
+                                                        <rect key="frame" x="167.5" y="0.0" width="147.5" height="147.5"/>
+                                                        <color key="backgroundColor" red="0.95294117649999999" green="0.78823529410000004" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
+                                                        <state key="normal" image="artist"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0Ti-bs-X7p" secondAttribute="height" multiplier="1:1" id="IMi-Hk-jvw"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPR-Jr-7Ko">
+                                        <rect key="frame" x="119" y="518" width="136" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="sign out"/>
+                                        <connections>
+                                            <action selector="signOut:" destination="UEU-IY-xGY" eventType="touchUpInside" id="4Si-zl-hUo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="IsH-yO-nEF" firstAttribute="top" secondItem="RFP-DN-PMe" secondAttribute="top" constant="8" id="Io9-Pc-Acy"/>
+                                    <constraint firstItem="IsH-yO-nEF" firstAttribute="leading" secondItem="RFP-DN-PMe" secondAttribute="leading" constant="20" id="ODX-xZ-MU2"/>
+                                    <constraint firstItem="0Ti-bs-X7p" firstAttribute="top" secondItem="IsH-yO-nEF" secondAttribute="bottom" constant="20" id="SD9-Ve-27i"/>
+                                    <constraint firstItem="0Ti-bs-X7p" firstAttribute="centerX" secondItem="RFP-DN-PMe" secondAttribute="centerX" id="ljB-hh-ESP"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="DPR-Jr-7Ko" firstAttribute="top" secondItem="zUO-S3-mC0" secondAttribute="top" id="OpN-wc-fdN"/>
-                            <constraint firstItem="KRo-ho-y5J" firstAttribute="centerY" secondItem="BDg-eT-i5b" secondAttribute="centerY" id="aKv-oa-NMo"/>
-                            <constraint firstItem="DPR-Jr-7Ko" firstAttribute="leading" secondItem="zUO-S3-mC0" secondAttribute="leading" constant="16" id="eiX-nP-xHU"/>
-                            <constraint firstItem="KRo-ho-y5J" firstAttribute="centerX" secondItem="BDg-eT-i5b" secondAttribute="centerX" id="fhe-Ae-LFP"/>
+                            <constraint firstItem="RFP-DN-PMe" firstAttribute="leading" secondItem="zUO-S3-mC0" secondAttribute="leading" id="3uy-bY-Owy"/>
+                            <constraint firstItem="0Ti-bs-X7p" firstAttribute="leading" secondItem="zUO-S3-mC0" secondAttribute="leading" constant="30" id="JtC-Vl-CwH"/>
+                            <constraint firstItem="RFP-DN-PMe" firstAttribute="trailing" secondItem="zUO-S3-mC0" secondAttribute="trailing" id="KWr-zd-1zI"/>
+                            <constraint firstItem="zUO-S3-mC0" firstAttribute="trailing" secondItem="0Ti-bs-X7p" secondAttribute="trailing" constant="30" id="Yk1-tC-8Ge"/>
+                            <constraint firstItem="RFP-DN-PMe" firstAttribute="bottom" secondItem="zUO-S3-mC0" secondAttribute="bottom" id="cvY-IQ-O5y"/>
+                            <constraint firstItem="zUO-S3-mC0" firstAttribute="top" secondItem="RFP-DN-PMe" secondAttribute="top" id="qJv-vI-WKr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zUO-S3-mC0"/>
                     </view>
@@ -155,6 +240,7 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="scrollView" destination="RFP-DN-PMe" id="IHM-zg-NdT"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="LoginScreenSegue" id="AWL-WE-KuG"/>
                     </connections>
                 </viewController>
@@ -244,8 +330,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="album" width="512" height="512"/>
+        <image name="artist" width="512" height="512"/>
         <image name="feed" width="38" height="38"/>
         <image name="music" width="57" height="57"/>
+        <image name="playlist" width="200" height="200"/>
         <image name="roulette" width="38" height="38"/>
         <image name="songbird_logo" width="319" height="290"/>
     </resources>
