@@ -16,11 +16,17 @@ import FirebaseUI
 
 class MusicViewController: UIViewController{
     
+    @IBOutlet weak var MusicButton: SwapColorButton!
+    @IBOutlet weak var PlaylistButton: SwapColorButton!
+    @IBOutlet weak var AlbumButton: SwapColorButton!
+    @IBOutlet weak var ArtistButton: SwapColorButton!
+    
     @IBOutlet weak var scrollView: ButtonEnabledScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.contentSize
             = CGSize(width: view.frame.width, height: 2000)
+        
         // Do any additional setup after loading the view, typically from a nib
     }
     @IBAction func signOut(_ sender: Any) {
