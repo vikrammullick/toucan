@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -135,51 +136,160 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-bs-X7p">
-                                        <rect key="frame" x="30" y="65.5" width="315" height="315"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-bs-X7p">
+                                        <rect key="frame" x="20" y="65.5" width="335" height="330"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iWR-Yp-omO">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="147.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="igG-EH-mNc">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkg-05-ntl" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="147.5"/>
-                                                        <color key="backgroundColor" red="0.25098039220000001" green="0.97647058819999999" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
-                                                        <state key="normal" image="music"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RB-4K-15C" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
-                                                        <rect key="frame" x="167.5" y="0.0" width="147.5" height="147.5"/>
-                                                        <color key="backgroundColor" red="0.27450980390000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
-                                                        <state key="normal" image="playlist"/>
-                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsT-4e-yPY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGO-a9-vvE" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
+                                                                <rect key="frame" x="5" y="5" width="65" height="65"/>
+                                                                <color key="backgroundColor" red="0.27450980390000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="kGO-a9-vvE" secondAttribute="height" multiplier="1:1" id="bdU-n5-d3y"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                                <state key="normal" image="music"/>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="songs" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxg-6I-4sa">
+                                                                <rect key="frame" x="78" y="8" width="225" height="59"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.18039215689999999" green="0.1843137255" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="gxg-6I-4sa" firstAttribute="leading" secondItem="kGO-a9-vvE" secondAttribute="trailing" constant="8" id="J5U-Xv-Vbp"/>
+                                                            <constraint firstItem="kGO-a9-vvE" firstAttribute="top" secondItem="AsT-4e-yPY" secondAttribute="top" constant="5" id="Rmd-Ai-PKz"/>
+                                                            <constraint firstAttribute="bottom" secondItem="gxg-6I-4sa" secondAttribute="bottom" constant="8" id="S3H-BI-Ve3"/>
+                                                            <constraint firstAttribute="trailing" secondItem="gxg-6I-4sa" secondAttribute="trailing" constant="32" id="VaN-81-reN"/>
+                                                            <constraint firstAttribute="bottom" secondItem="kGO-a9-vvE" secondAttribute="bottom" constant="5" id="WBs-dw-hEU"/>
+                                                            <constraint firstItem="gxg-6I-4sa" firstAttribute="top" secondItem="AsT-4e-yPY" secondAttribute="top" constant="8" id="emn-OO-Azs"/>
+                                                            <constraint firstItem="kGO-a9-vvE" firstAttribute="leading" secondItem="AsT-4e-yPY" secondAttribute="leading" constant="5" id="wSf-Me-0cx"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="tW6-d0-yzY"/>
+                                                </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tFq-Lj-rJ8">
-                                                <rect key="frame" x="0.0" y="167.5" width="315" height="147.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="s9E-Sb-k94">
+                                                <rect key="frame" x="0.0" y="85" width="335" height="75"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-UO-aAT" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="147.5"/>
-                                                        <color key="backgroundColor" red="0.99215686274509807" green="0.36862745098039218" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
-                                                        <state key="normal" image="album"/>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEe-N5-5NM" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
-                                                        <rect key="frame" x="167.5" y="0.0" width="147.5" height="147.5"/>
-                                                        <color key="backgroundColor" red="0.95294117649999999" green="0.78823529410000004" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
-                                                        <state key="normal" image="artist"/>
-                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRU-z4-k1s">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRN-oF-zTe" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
+                                                                <rect key="frame" x="5" y="5" width="65" height="65"/>
+                                                                <color key="backgroundColor" red="0.27450980390000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="lRN-oF-zTe" secondAttribute="height" multiplier="1:1" id="Rtb-O1-Qg8"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                                <state key="normal" image="playlist"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.1803921568627451" green="0.18431372549019609" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="lRN-oF-zTe" firstAttribute="top" secondItem="sRU-z4-k1s" secondAttribute="top" constant="5" id="Eif-X1-dHd"/>
+                                                            <constraint firstItem="lRN-oF-zTe" firstAttribute="leading" secondItem="sRU-z4-k1s" secondAttribute="leading" constant="5" id="hjk-7y-Q6k"/>
+                                                            <constraint firstAttribute="bottom" secondItem="lRN-oF-zTe" secondAttribute="bottom" constant="5" id="lzz-ju-0X1"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="lgf-cE-Uip"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vDg-Rj-LVK">
+                                                <rect key="frame" x="0.0" y="170" width="335" height="75"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lr4-ad-wFk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7G-Ge-pxv" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
+                                                                <rect key="frame" x="5" y="5" width="65" height="65"/>
+                                                                <color key="backgroundColor" red="0.27450980390000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="H7G-Ge-pxv" secondAttribute="height" multiplier="1:1" id="jjJ-zA-2Uy"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                                <state key="normal" image="album"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.18039215689999999" green="0.1843137255" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="H7G-Ge-pxv" secondAttribute="bottom" constant="5" id="A5i-qP-kJ3"/>
+                                                            <constraint firstItem="H7G-Ge-pxv" firstAttribute="top" secondItem="lr4-ad-wFk" secondAttribute="top" constant="5" id="Z06-h6-31L"/>
+                                                            <constraint firstItem="H7G-Ge-pxv" firstAttribute="leading" secondItem="lr4-ad-wFk" secondAttribute="leading" constant="5" id="rie-8I-Lz7"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="gfE-lf-U9I"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="a7c-xk-lmy">
+                                                <rect key="frame" x="0.0" y="255" width="335" height="75"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYh-oo-bFV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uES-on-3A0" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
+                                                                <rect key="frame" x="5" y="5" width="65" height="65"/>
+                                                                <color key="backgroundColor" red="0.27450980390000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="uES-on-3A0" secondAttribute="height" multiplier="1:1" id="GhD-6K-8Em"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                                <state key="normal" image="artist"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.18039215689999999" green="0.1843137255" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="uES-on-3A0" firstAttribute="top" secondItem="cYh-oo-bFV" secondAttribute="top" constant="5" id="HZy-Gz-Suo"/>
+                                                            <constraint firstItem="uES-on-3A0" firstAttribute="leading" secondItem="cYh-oo-bFV" secondAttribute="leading" constant="5" id="QZI-E3-HwW"/>
+                                                            <constraint firstAttribute="bottom" secondItem="uES-on-3A0" secondAttribute="bottom" constant="5" id="tVF-1F-UxN"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="Jpd-Nw-ndE"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="0Ti-bs-X7p" secondAttribute="height" multiplier="1:1" id="IMi-Hk-jvw"/>
-                                        </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPR-Jr-7Ko">
                                         <rect key="frame" x="119" y="518" width="136" height="60"/>
@@ -203,9 +313,9 @@
                         <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="RFP-DN-PMe" firstAttribute="leading" secondItem="zUO-S3-mC0" secondAttribute="leading" id="3uy-bY-Owy"/>
-                            <constraint firstItem="0Ti-bs-X7p" firstAttribute="leading" secondItem="zUO-S3-mC0" secondAttribute="leading" constant="30" id="JtC-Vl-CwH"/>
+                            <constraint firstItem="0Ti-bs-X7p" firstAttribute="leading" secondItem="zUO-S3-mC0" secondAttribute="leading" constant="20" id="JtC-Vl-CwH"/>
                             <constraint firstItem="RFP-DN-PMe" firstAttribute="trailing" secondItem="zUO-S3-mC0" secondAttribute="trailing" id="KWr-zd-1zI"/>
-                            <constraint firstItem="zUO-S3-mC0" firstAttribute="trailing" secondItem="0Ti-bs-X7p" secondAttribute="trailing" constant="30" id="Yk1-tC-8Ge"/>
+                            <constraint firstItem="zUO-S3-mC0" firstAttribute="trailing" secondItem="0Ti-bs-X7p" secondAttribute="trailing" constant="20" id="Yk1-tC-8Ge"/>
                             <constraint firstItem="RFP-DN-PMe" firstAttribute="bottom" secondItem="zUO-S3-mC0" secondAttribute="bottom" id="cvY-IQ-O5y"/>
                             <constraint firstItem="zUO-S3-mC0" firstAttribute="top" secondItem="RFP-DN-PMe" secondAttribute="top" id="qJv-vI-WKr"/>
                         </constraints>
@@ -216,10 +326,6 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="AlbumButton" destination="uDw-UO-aAT" id="LlU-Ll-8HQ"/>
-                        <outlet property="ArtistButton" destination="KEe-N5-5NM" id="Qdy-jM-neB"/>
-                        <outlet property="MusicButton" destination="Bkg-05-ntl" id="bc8-EV-wR6"/>
-                        <outlet property="PlaylistButton" destination="1RB-4K-15C" id="9JK-R7-APu"/>
                         <outlet property="scrollView" destination="RFP-DN-PMe" id="IHM-zg-NdT"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="LoginScreenSegue" id="AWL-WE-KuG"/>
                     </connections>
