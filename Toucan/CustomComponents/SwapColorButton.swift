@@ -19,14 +19,13 @@ class SwapColorButton: UIButton {
         self.layer.cornerRadius = 20
         self.layer.borderWidth = 5
         self.layer.borderColor = self.backgroundColor?.cgColor
-        self.backgroundColor = self.backgroundColor?.withAlphaComponent(0.75)
         
         self.primaryColor = self.backgroundColor!
     }
     override var isHighlighted: Bool {
         didSet {
             if (isHighlighted) {
-                self.backgroundColor = self.primaryColor.withAlphaComponent(1)
+                self.backgroundColor = self.primaryColor.withAlphaComponent(0.75)
             }
             else {
                 self.backgroundColor = self.primaryColor

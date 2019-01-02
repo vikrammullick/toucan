@@ -135,21 +135,21 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-bs-X7p">
-                                        <rect key="frame" x="30" y="65.5" width="315" height="315"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-bs-X7p">
+                                        <rect key="frame" x="40" y="75.5" width="295" height="295"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iWR-Yp-omO">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="147.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iWR-Yp-omO">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="135"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkg-05-ntl" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="147.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
                                                         <color key="backgroundColor" red="0.25098039220000001" green="0.97647058819999999" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
                                                         <state key="normal" image="music"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RB-4K-15C" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
-                                                        <rect key="frame" x="167.5" y="0.0" width="147.5" height="147.5"/>
+                                                        <rect key="frame" x="160" y="0.0" width="135" height="135"/>
                                                         <color key="backgroundColor" red="0.27450980390000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
@@ -157,18 +157,18 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tFq-Lj-rJ8">
-                                                <rect key="frame" x="0.0" y="167.5" width="315" height="147.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tFq-Lj-rJ8">
+                                                <rect key="frame" x="0.0" y="160" width="295" height="135"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-UO-aAT" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="147.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
                                                         <color key="backgroundColor" red="0.99215686274509807" green="0.36862745098039218" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
                                                         <state key="normal" image="album"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEe-N5-5NM" customClass="SwapColorButton" customModule="Toucan" customModuleProvider="target">
-                                                        <rect key="frame" x="167.5" y="0.0" width="147.5" height="147.5"/>
+                                                        <rect key="frame" x="160" y="0.0" width="135" height="135"/>
                                                         <color key="backgroundColor" red="0.95294117649999999" green="0.78823529410000004" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="30" minY="30" maxX="30" maxY="30"/>
@@ -195,7 +195,7 @@
                                 <constraints>
                                     <constraint firstItem="IsH-yO-nEF" firstAttribute="top" secondItem="RFP-DN-PMe" secondAttribute="top" constant="8" id="Io9-Pc-Acy"/>
                                     <constraint firstItem="IsH-yO-nEF" firstAttribute="leading" secondItem="RFP-DN-PMe" secondAttribute="leading" constant="20" id="ODX-xZ-MU2"/>
-                                    <constraint firstItem="0Ti-bs-X7p" firstAttribute="top" secondItem="IsH-yO-nEF" secondAttribute="bottom" constant="10" id="SD9-Ve-27i"/>
+                                    <constraint firstItem="0Ti-bs-X7p" firstAttribute="top" secondItem="IsH-yO-nEF" secondAttribute="bottom" constant="20" id="SD9-Ve-27i"/>
                                     <constraint firstItem="0Ti-bs-X7p" firstAttribute="centerX" secondItem="RFP-DN-PMe" secondAttribute="centerX" id="ljB-hh-ESP"/>
                                 </constraints>
                             </scrollView>
@@ -203,9 +203,9 @@
                         <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="RFP-DN-PMe" firstAttribute="leading" secondItem="zUO-S3-mC0" secondAttribute="leading" id="3uy-bY-Owy"/>
-                            <constraint firstItem="0Ti-bs-X7p" firstAttribute="leading" secondItem="zUO-S3-mC0" secondAttribute="leading" constant="30" id="JtC-Vl-CwH"/>
+                            <constraint firstItem="0Ti-bs-X7p" firstAttribute="leading" secondItem="zUO-S3-mC0" secondAttribute="leading" constant="40" id="JtC-Vl-CwH"/>
                             <constraint firstItem="RFP-DN-PMe" firstAttribute="trailing" secondItem="zUO-S3-mC0" secondAttribute="trailing" id="KWr-zd-1zI"/>
-                            <constraint firstItem="zUO-S3-mC0" firstAttribute="trailing" secondItem="0Ti-bs-X7p" secondAttribute="trailing" constant="30" id="Yk1-tC-8Ge"/>
+                            <constraint firstItem="zUO-S3-mC0" firstAttribute="trailing" secondItem="0Ti-bs-X7p" secondAttribute="trailing" constant="40" id="Yk1-tC-8Ge"/>
                             <constraint firstItem="RFP-DN-PMe" firstAttribute="bottom" secondItem="zUO-S3-mC0" secondAttribute="bottom" id="cvY-IQ-O5y"/>
                             <constraint firstItem="zUO-S3-mC0" firstAttribute="top" secondItem="RFP-DN-PMe" secondAttribute="top" id="qJv-vI-WKr"/>
                         </constraints>
