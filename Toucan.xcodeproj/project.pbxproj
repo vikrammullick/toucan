@@ -21,7 +21,7 @@
 		E45D561021D887520058A08B /* ButtonEnabledScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D560F21D887520058A08B /* ButtonEnabledScrollView.swift */; };
 		E4A16DBE21D5A71600BD23D2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DBD21D5A71600BD23D2 /* RootViewController.swift */; };
 		E4A16DC221D6273200BD23D2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DC121D6273200BD23D2 /* FeedViewController.swift */; };
-		E4A16DC421D6273C00BD23D2 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DC321D6273C00BD23D2 /* MusicViewController.swift */; };
+		E4A16DC421D6273C00BD23D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DC321D6273C00BD23D2 /* ProfileViewController.swift */; };
 		E4A16DC621D6274900BD23D2 /* RouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A16DC521D6274900BD23D2 /* RouletteViewController.swift */; };
 		E4C21AC021D17BE400213100 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4C21ABF21D17BE400213100 /* GoogleService-Info.plist */; };
 		E4C21AC721D1BE2000213100 /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C21AC621D1BE2000213100 /* MusicAPI.swift */; };
@@ -73,7 +73,7 @@
 		E45D560F21D887520058A08B /* ButtonEnabledScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEnabledScrollView.swift; sourceTree = "<group>"; };
 		E4A16DBD21D5A71600BD23D2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E4A16DC121D6273200BD23D2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		E4A16DC321D6273C00BD23D2 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		E4A16DC321D6273C00BD23D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E4A16DC521D6274900BD23D2 /* RouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewController.swift; sourceTree = "<group>"; };
 		E4C21ABF21D17BE400213100 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E4C21AC621D1BE2000213100 /* MusicAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicAPI.swift; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 				E4A16DBD21D5A71600BD23D2 /* RootViewController.swift */,
 				E4A16DC121D6273200BD23D2 /* FeedViewController.swift */,
 				E4A16DC521D6274900BD23D2 /* RouletteViewController.swift */,
-				E4A16DC321D6273C00BD23D2 /* MusicViewController.swift */,
+				E4A16DC321D6273C00BD23D2 /* ProfileViewController.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -506,7 +506,7 @@
 				E4C21AC721D1BE2000213100 /* MusicAPI.swift in Sources */,
 				E4A16DBE21D5A71600BD23D2 /* RootViewController.swift in Sources */,
 				E455693221D011BF00ED676D /* LoginViewController.swift in Sources */,
-				E4A16DC421D6273C00BD23D2 /* MusicViewController.swift in Sources */,
+				E4A16DC421D6273C00BD23D2 /* ProfileViewController.swift in Sources */,
 				E45D561021D887520058A08B /* ButtonEnabledScrollView.swift in Sources */,
 				E4A16DC621D6274900BD23D2 /* RouletteViewController.swift in Sources */,
 				E455693021D011BF00ED676D /* AppDelegate.swift in Sources */,
